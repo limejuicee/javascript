@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>키이벤트</title>
+    </head>
+    <body>
+        <!-- onkeypress="onkeypress()" -->
+        <input id="input" type="text" onkeydown="onkeydown()"  ondeyup="onkeyup()">
+        <script>
+            let inputTag=document.querySelector('#input');
+            function onkeydown(event) {
+                if(event.keyCode==13) {
+                    inputTag.style.backgroudColor='red';
+                }
+            }
+            function onkeyup() {
+                document.write("onkeyup");
+            }
+        </script>
+    </body>
+</html>

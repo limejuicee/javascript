@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>마우스이벤트</title>
+        <style>
+            div {
+                margin-top:20px;
+            }
+            img {
+                border: 2px solid red;
+                border-radius:15px;
+                width : 150px;
+            }
+            #detail,#detail2,#detail3 {
+                display:none;
+            }
+            .second {
+                display : inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="ioi.png" alt="해변" ondblclick="myDouble()" onclick="myClick()">
+            <div class="second" id="detail">더블클릭</div>
+        </div>
+        <div>
+            <img src="iop.png" alt="산" onmousemove="myMove()" onmouseout="myLeave()">
+            <div class="second" id="detail2">마우스무브</div>
+        </div>
+        <div>
+            <img src="iou.png" alt="밤하늘" onmouseenter="myEnter()" onmouseout="myLeave()">
+            <div class="second" id="detail3">마우스엔터</div>
+        </div>
+        <script>
+            function myDouble() {
+                let text=document.querySelector("#detail");
+                text.style.display="block";
+            }
+            function myMove() {
+                let text=document.querySelector("#detail2");
+                text.style.display="block";
+            }
+            function myEnter() {
+                let text=document.querySelector("#detail3");
+                text.style.display="block";
+            }
+            function myLeave() {
+                let text3=document.querySelector("#detail3");
+                let text2=document.querySelector("#detail2");
+                text3.style.display="none";
+                text2.style.display="none";         
+            }
+            function myClick() {
+                let text=document.querySelector("#detail");
+                text.style.display="none";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>return문의 또다른 용도</title>
+</head>
+<body>
+    <script>
+        function sample() {
+            let sum=0;
+            let count=1;
+
+            //무한루프 시작
+            while(true) {
+                let value = parseInt(prompt("수 입력",1));
+                if (value==0) {
+                    document.write("종료합니다"+"<br>");
+                    document.write("총 "+count+"번 실행했습니다");
+                    //함수탈출
+                    return;
+                }
+                //입력 값 더하기
+                sum+=value;
+                
+                //입력 값 출력하기
+                document.write(count+", "+sum+"<br>");
+                count++;
+            }
+
+        }
+        //함수 호출
+        sample();
+    </script>
+</body>
+</html>

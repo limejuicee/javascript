@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>버튼 여러개</title>
+        <style>
+            /* button {background-color :red} */
+        </style>
+    </head>
+    <div>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+    </div>
+    <div>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+    </div>
+    <div>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+        <button>버튼</button>
+    </div>
+    <body>
+        <script>
+            let btnsNodeList=document.querySelectorAll("button");
+            // btnsNodeList[0].innerHTML="버튼1";
+
+            for (i=0; i<btnsNodeList.length; i++) {
+                if (i<9) {
+                    btnsNodeList[i].innerHTML="버튼 0"+(i+1)
+                } else
+                btnsNodeList[i].innerHTML="버튼 "+(i+1)
+            }
+
+            for (i=0; i<btnsNodeList.length; i++) {
+                if (i<4) {
+                    btnsNodeList[i].style.backgroundColor="red";
+                } else if (i<8) {
+                    btnsNodeList[i].style.backgroundColor="blue";
+                } else if (i<12) {
+                    btnsNodeList[i].style.backgroundColor="green";
+                }
+            }
+
+            for (i=0; i<btnsNodeList.length; i++) {
+                if (i==0||i==4||i==8) {
+                    btnsNodeList[i].style.color="gold";
+                } else if (i==1||i==5||i==9) {
+                    btnsNodeList[i].style.color="salmon";
+                } else if (i==2||i==6||i==10) {
+                    btnsNodeList[i].style.color="seagreen";
+                } else if (i==3||i==7||i==11) {
+                    btnsNodeList[i].style.color="blue";
+                }
+            }
+            
+            btnsNodeList[0].onclick=function() {
+                btnsNodeList[11].style.transform="scale(150%)"
+            }
+
+            
+            
+        </script>
+    </body>
+</html>

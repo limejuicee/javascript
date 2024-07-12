@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        th {
+            background-color :aqua;
+            width :200px;
+            height : 50px;
+            text-align: center;
+        }
+        td {
+            background-color :aquamarine;
+            width : 200px;
+            height : 50px;
+            text-align: center;
+        }
+        div {
+            background-color: black;
+            color : white;
+            text-align: center;
+            line-height: 70px;
+            font-size:20px;
+            font-weight: bold;
+            width:200px;
+            height: 70px;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td> <td></td> <td></td> <td></td> <td></td>
+        </tr>
+        <tr>
+            <td></td> <td></td> <td></td> <td></td> <td></td>
+        </tr>
+        <tr>
+            <td></td> <td></td> <td></td> <td></td> <td></td>  
+        </tr>
+        <tr>
+            <td></td> <td></td> <td></td> <td></td> <td></td>
+        </tr>
+        <tr>
+            <td></td> <td></td> <td></td> <td></td> <td></td>
+        </tr>
+        <tr>
+            <td></td> <td></td> <td></td> <td></td> <td></td>
+        </tr>
+        <tr>
+            <td></td> <td></td> <td></td> <td></td> <td></td>
+        </tr>
+    </table>
+    <div></div>
+    <script>
+        let guest=prompt("입장객 수");
+        let td=document.querySelectorAll("td");
+        let div=document.querySelectorAll("div");
+        let abc=["A","B","C","D","E"];
+
+        // for(i=0; i<5; i++) {
+        //     for(j=0; j<5; j++) {
+        //         th[i].innerHTML=("좌석 (A열 "+(i+1)+"번)")                
+        //     }
+        // }
+
+        // for(i=0; i<5; i++) {
+        //     for(j=0; j<5; j++) {
+        //         th[i].innerHTML=("좌석 (A열 "+(i+1)+"번)")                
+        //     }
+        // }
+        // for (i=0; i<guest; i++) {
+        //     if(guest<=5) {
+        //         j=0
+        //     }else if(guest<=10&&guest>5) {
+        //         j=1
+        //     }
+        //         td[i].innerHTML=("좌석 ("+abc[j]+"열"+(i+1)+" 번)")
+        //     }
+
+        for(i=0; i<td.length; i++) {
+            td[i].innerText=((i+1)+" 번")
+        }
+       
+       
+        for(i=0; i<td.length; i++) {
+            let val=td[i];
+            td[i].addEventListener("click", function() {
+                div[0].innerHTML=(val.innerText);
+            })
+        }
+        // td[0].innerHTML=("좌석(a열 1번)");
+
+    </script>
+</body>
+</html>

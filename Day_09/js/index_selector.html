@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>event selector</title>
+        <style>
+            #result{
+                width:400px;
+                height:100px;
+                line-height:50px;
+                border:1px solid black;
+                margin-top:10px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+            <h2>o 나의 체질량지수(BMI)</h2>
+            <h>체질량 지수는 자신의 몸무게(kg)를 키의 제곱(m)으로 나눈 값입니다<br>
+            체질량지수는 근육량, 유전적 원인, 다른 개인적 차이를 반영하지 못하는 단점이 있음에도 불구하고<br>
+            조사자들이나 의료인들이 가장 많이 쓰는 방법 중 하나입니다.<br></h>
+            <label for="height">신장</label>
+            <input type="text" id="height" name="height">
+            cm /
+            <label for="height">체중</label>
+            <input type="text" id="weight" name="weight">
+            kg
+            <input type="button" value="계산" onclick="doBMI()">
+            <input type="button" value="초기화">
+
+            <div id="result">
+                비만도 결과&nbsp&nbsp&nbsp&nbsp
+                BMI지수<br>
+                [<span id="result2">비만</span>]&nbsp&nbsp&nbsp&nbsp&nbsp[<span id=result3>27.1</span>]
+            </div>
+            <ul>
+                <h4>o 올바른 식생활 지침</h4>
+                <li>제때에</li>
+                <li>신체리듬에 맞춰 규칙적으로 식사하는 것은 아주 중요합니다. 특히 아침을 거르지 맙시다</li>
+                <li>골고루</li>
+                <li>다양한 식품을 선택해 부족한 영양소가 없도록 해야 합니다</li>
+            </ul>
+            <script>
+                function doBMI() {
+                //신장에 입력되는 값을 핸들링하려면, input태그를 찾아와야 함 querySelector
+                let heightTag=document.querySelector("#height");
+                let weightTag=document.querySelector("#weight");
+                let bmi=(   (  (parseInt(weightTag.value))/parseInt(heightTag.value*heightTag.value)   )*10000).toFixed(3);
+                document.write(bmi);
+                let result2="비ㅣㅣ만"
+                let result2Tag=document.querySelector("result2");
+                result2Tag.innerHTML="<h1>"+result+"<h1>";
+                document.querySelector('#result3');
+                }
+            </script>
+    </body>
+
+</html>

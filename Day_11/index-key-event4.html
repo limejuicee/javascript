@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            label {
+                display:inline-block;
+                text-align:justify;
+                width:100px;
+            }
+        </style>
+    </head>
+    <p><label>키</label><input type="number" name="hight" id="hight" required></p>
+    <p><label>몸무게</label><input type="number" name="weigt" id="weight" required onKeyup="myKeyup()"></p>
+    <p><label>bmi</label><input type="number" name="BMI" id="BMI" readonly></p>
+    <body>
+        <script>
+            let numTag=document.querySelectorAll('input');
+            numTag[1].myKeyup=function() {
+                numTag[2].value=(numTag[1].value*10000)/(numTag[0].value*numTag[0].value).toFixed(3);
+            }
+            // function myKeyup() {
+            //     let numTag=document.querySelectorAll('input');
+            //     numTag[2].value=(numTag[1].value*10000)/(numTag[0].value*numTag[0].value).toFixed(3);
+            // }
+        </script>
+    </body>
+</html>

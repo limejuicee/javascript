@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <style>
+        
+    </style>
+    <body>
+        <div id="info">
+            <p>DOM은 document object model의 줄입말입니다</p>
+            <a href='#'>구글사이트</a>
+        </div>
+        <script>
+            let newP=document.createElement("p");
+            let textNode=document.createTextNode("어렵게 만든 DOM은 document object model의 줄입말입니다");
+            newP.appendChild(textNode);
+            let myParent=document.getElementById("info");
+            myParent.appendChild(newP);
+
+            let newImg=document.createElement("img");
+            let srcNode=document.createAttribute("src");
+            let altNode=document.createAttribute("alt");
+
+            srcNode.value="../images/cup-1.png";
+            altNode.value="구글이미지";
+            newImg.setAttributeNode(srcNode);
+            newImg.setAttributeNode(altNode);
+            document.getElementById("info").appendChild(newImg);
+
+            // document.getElementById("info").removeChild(newP);
+
+            let myA=document.getElementsByTagName('a');
+            myA[0].addEventListener("click",function() {
+                if(newP!=null)
+                document.getElementById("info").removeChild(newP)});
+
+            newImg.parentNode.removeChild(newImg);
+        </script>
+    </body>
+</html>

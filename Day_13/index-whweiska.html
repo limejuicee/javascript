@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            ul {
+                font-weight:b
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Web programming</h1>
+        <h>공부할 주제를 기록해 보세요</h><br>
+        <h>공부가 끝난 것은 클릭해서 삭제할 수 있습니다</h><br>
+        <input type="text" id="text" name="input" autofocus></input> <button>추가</button> <hr>
+        <div id="list">
+            <ul>
+
+            </ul>
+        </div>
+
+        <script>
+            let myBtn=document.getElementsByTagName("button");
+
+            myBtn[0].addEventListener("click",function() {
+                let newLi=document.createElement("li"); //li를 어딘가에 생성하는 작업을 저장
+                let ipVal=document.getElementById("text"); //input 불러오는 작업을 저장
+                let textNode=document.createTextNode(ipVal.value); //input 값 저장
+                
+                newLi.appendChild(textNode); //li에 dg를 붙임
+                let myParent=document.getElementById("list"); //ul을 불러오는 작업을 저장
+                
+                myParent.appendChild(newLi); //ul에 li를 붙임
+
+                let uls=document.getElementsByTagName("ul");
+                uls[0].insertBefore(newLi,uls[0].firstChild);
+
+                
+                newLi.addEventListener("click",function() {
+                    uls[0].removeChild(newLi);
+                })
+
+                newLi.addEventListener("mouseover",function() {
+                    uls[0].style.fontWeight="bold";
+                })
+                newLi.addEventListener("mouseout", function() {
+                    uls[0].style.fontWeight="";
+                })
+                
+                newLi.addEventListener("keydown", function() {
+                    myParent.appendChild(newLi);
+                })
+                newLi.addEventListener("keydown", function(event) {
+                    if(event.keyCode==13) {
+                        myParent.appendChild(newLi)
+                    }
+                })
+                // alert(textNode);
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>타이머</title>
+        <style>
+            .text {
+                width : 100px;
+            }
+            .time {
+                width : 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <button>innerText로 표시</button>
+        <button>innerHTML로 표시</button>
+        <div class="text"></div>
+        <div class="time"></div>
+
+        <script>
+            let btns=document.getElementsByTagName("button");
+            btns[0].addEventListener("click", function(){
+                this.innerText="innerText";
+            });
+            btns[0].addEventListener("mouseout", function(){
+                this.innerText="innerText로 표시";
+            });
+
+            btns[1].addEventListener("click", function() {
+                this.innerHTML="<h1>innerHTML</h1> <img src='http://www.jetbrains.com/img/banners-home-page/galaxy-icon.svg' alt=''>";
+            });
+
+            btns[1].addEventListener("mouseover", function(){
+                this.innerHTML="마우스 올려짐";
+            });
+            btns[1].addEventListener("mouseout", function(){
+                this.innerHTML="innerHTML로 표시";
+            });
+
+
+
+            let date=new Date();
+            let ti=document.getElementsByTagName("div");
+            ti[0].innerHTML="현재시각 :";
+            ti[0].setAttribute("color","red");
+            ti[1].innerHTML=date.getFullYear()+"년 "+(date.getMonth()+1)+"월 "+date.getDate()+"일 "+dayOfTheWeekFunc(date.getDay())+"요일 "+date.getHours()+"시";
+            function dayOfTheWeekFunc(week) {
+                let weekStr="";
+                switch(week) 
+                {case 1 : weekStr="월"}
+                return weekStr;                
+            }
+        </script>
+    </body>
+</html>

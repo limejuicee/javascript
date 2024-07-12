@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <title>이벤트</title>
+        <style>
+            div{
+                width : 100px;
+                height : 100px;
+                background-color :rgb(0, 255, 255);
+                margin-top: 10px;
+                line-height: 100px;
+                text-align: center;
+                font-weight:bold;
+                scale : "150%";
+            }
+            
+        </style>
+    </head>
+    <body>
+        <button id="btn">버튼</button>
+            <div id="rect">
+                네모
+            </div>
+        <button onmousewheel="myDo()">버튼</button>
+
+        <script>
+            function myDo(){
+                alert('클릭');
+            }
+            let btn=document.getElementById("btn");
+
+            btn.onclick=function() {
+                btn.style.backgroundColor="yellow";
+            }
+            btn.onmouseover=function() {
+                btn.style.backgroundColor="red";
+            }
+            btn.onmouseout=function() {
+                btn.style.backgroundColor="rgb(239,239,239)";
+            }
+            btn.onmousewheel=function() {
+                btn.document.write("2");
+            }
+
+            let rect=document.getElementById("rect");
+
+            rect.onmouseover=function() {
+                rect.style.backgroundColor="gold";
+                rect.style.cursor="pointer";
+            }
+            rect.onmouseout=function() {
+                rect.style.backgroundColor="aqua";
+                rect.style.color="black";
+            }
+            rect.onclick=function() {
+                if(rect.style.backgroundColor!="blue") {
+                    rect.style.backgroundColor="blue";
+                    rect.style.color="red";
+                }else {
+                    rect.style.backgroundColor="red";
+                    rect.style.color="blue";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <title>로또</title>
+    </head>
+    <body>
+        <script>
+            //1~45의 랜덤한 수를 추출하자
+            
+            //함수호출
+            let result=myRandom(45);
+            document.write(result);
+            //함수정의
+            function myRandom(maxNum) {
+                return parseInt(Math.random()*maxNum+1)
+            }
+
+            let lottoArray=new Array();
+            while (lottoArray.length<6) {
+                if(checkNum==false) {
+                    lottoArray.push(myRandom(45));
+                    document.write(lottoArray);
+                }
+                if(checkNum(lottoArray)) {
+                    continue;
+                }else {
+                lottoArray.push(myRandom(45));
+                }
+            }
+            function checkNum() {
+                checkNum==checkNum;
+            }
+
+            //예쁘게 보여주자
+        </script>
+    </body>
+</html>

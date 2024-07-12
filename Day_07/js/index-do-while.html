@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>do-while</title>
+    </head>
+    <body>
+        <script>
+            let id="";
+            let pw="";
+            do {
+                id=prompt("id");
+                pw=prompt("pw");
+                if(id==null || pw==null) {document.write("정보를 입력해주세요")
+            }   else if(id!="iot") {
+                    document.write("아이디 틀림")
+                }
+                else if(pw!="8888") {
+                    document.write("패스워드 틀림")
+                }
+            break;
+            } while(!(id=="iot"&&pw=="8888"));
+            if(id=="iot"&&pw=="8888") {
+                document.write("go");
+            }
+            //id와 pw의 값이 일치해서 go
+            //id와 pw를 프롬프트로 받아서 
+            //id="iot" 이고 pw는 "8888" 이면 "go" alert()를 보여주자
+            //아니면 다시 로그인 정보를 받아보자
+        </script>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #green {
+            background-color:green;
+            color: white;
+        }
+        #Orange {
+            background-color:orange;
+            color : white;
+        }
+        #Purple {
+            background-color:purple;
+            color : white;
+        }
+        div {
+            display : inline-block;
+        }
+        #is {
+            background-color:beige;
+            width : 400px;
+            height : 400px;
+            margin-top : 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div><button id="green">Green</button></div>
+    <div><button id="Orange">Orange</button></div>
+    <div><button id="Purple">Purple</button></div> <br>
+    <button id="is"></button>
+    <script>
+        let btn=document.querySelectorAll("button");
+        let a="green";
+        btn[0].onclick=function () {
+            btn[0].style.backgroundColor="beige";
+            btn[1].style.backgroundColor="Orange";
+            btn[2].style.backgroundColor="purple";
+            btn[3].style.backgroundColor="green";
+            // btn[0].style.color="black";
+            // btn[1].style.color="";
+            // btn[2].style.color="";
+        }
+
+        btn[1].onclick=function () {
+            btn[0].style.backgroundColor="green";
+            btn[1].style.backgroundColor="beige";
+            btn[2].style.backgroundColor="purple";
+            btn[3].style.backgroundColor="orange";
+            // btn[0].style.color="";
+            // btn[1].style.color="black";
+            // btn[2].style.color="";
+        }
+
+        btn[2].onclick=function () {
+            btn[0].style.backgroundColor="green";
+            btn[1].style.backgroundColor="orange";
+            btn[2].style.backgroundColor="beige";
+            btn[3].style.backgroundColor="purple";
+            // btn[0].style.color="";
+            // btn[1].style.color="";
+            // btn[2].style.color="black";
+        }
+
+        // btn[3].onclick=function () {
+        //     btn[0].style.backgroundColor="";
+        //     btn[1].style.backgroundColor="";
+        //     btn[2].style.backgroundColor="";
+        //     btn[3].style.backgroundColor="";
+        //     btn[0].style.color="";
+        //     btn[1].style.color="";
+        //     btn[2].style.color="";
+        // }
+        
+        btn[3].onclick=function () {
+            for (i=0; i<btn.length; i++) {
+                btn[i].style.backgroundColor="";
+                btn[i].style.color="";
+                }       
+            }
+
+        let i=0;
+
+        btn[i].onclick=function () {
+            for(i=0; i<btn.length; i++) {
+                for (j=0; j<btn.length; j++) {
+                    if (i==j) {
+                        btn[i].style.backgroundColor="beige";
+                        btn[i].style.color="black";
+                    }
+                }
+            }
+        }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <style>
+        img {width:150px;}
+    </style>
+</head>
+<body>
+    <!-- <img src="../Day_09/js/ioi.png" alt="해변" onmouseover="myDo()"> -->
+    <img src="../Day_09/js/ioi.png" alt="해변" onmouseover="myDo()">
+    <img src="../Day_09/js/iop.png" alt="산" onmouseover="myDo()">
+    <script>
+        let imgTag=document.querySelector("img");
+        imgTag.onclick=myDo;
+        imgTag.onmouseout=myOut;
+
+        function myDo() {
+            imgTag.style.transform="scale(110%)";
+            // alert("1");
+        }
+        function myOut() {
+            imgTag.style.transform="";
+        }
+
+        let imgTagNodeList=document.querySelectorAll("img");
+        imgTagNodeList[0].onmouseover=function() {
+            imgTagNodeList[0].style.transform="scale(110%)";
+        }
+        imgTagNodeList[1].onmouseover=function() {
+            imgTagNodeList[1].style.transform="scale(90%)";
+        }
+        imgTagNodeList[0].onmouseout=function() {
+            imgTagNodeList[0].style.transform="scale(100%)";
+        }
+        imgTagNodeList[1].onmouseout=function() {
+            imgTagNodeList[1].style.transform="scale(100%)";
+        }
+
+        // for (let i=0; i<imgTagNodeList.length; i++) {
+        //     imgTagNodeList[i].onmouseout=function() {
+        //         imgTagNodeList[i].style.transform="scale(90%)"
+        //     }
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <title>매개변수</title>
+    </head>
+    <body>
+        <script>
+            let num1=parseInt(prompt("숫자 입력"));
+            let num2=parseInt(prompt("숫자 입력"));
+            let num3=parseInt(prompt("숫자 입력"));
+            let ret=add(num1,num2);
+            let ret2=mul(num1,num2,num3);
+
+            // document.write(ret+"<br>");
+            // document.write(ret2+"<br>");
+
+            function add(n1,n2) {
+                let result=n1+n2;
+                return result;
+            }
+            function mul(n1,n2,n3) {
+                let result=n1*n2*n3;
+                return result;
+            }
+
+            let i=5, j=2, k;
+            sub(i,j);
+            document.write(k+"<br>");
+            function sub(i,j) {
+                return k=parseInt(i-j);
+            }
+
+            let age=0;
+            age=setAge(8);
+            document.write(age+"<br>");
+            function setAge(a) {
+                return a+20;
+            }
+
+            let student=['마이콜','맛좋은라면','꼬불꼬불','연탄'];
+            
+            print();
+            function print() {
+                for (i=0; i<student.lenth; i++) {
+                    document.write(student[i],"!","<br>");
+                }
+            }
+
+            printDo(student,"!");
+            function printDo(array,mark) {
+                for (i=0; i<student.lenth; i++) {
+                    document.write(student[i],"!","<br>");
+                }
+            }
+
+            let result;
+            result=pow(3);
+            document.write("3x3= "+result);
+
+            //필요한 함수를 정의하시오
+            function pow(number) {
+                return number*number;
+            }
+
+
+
+        </script>
+    </body>
+</html>

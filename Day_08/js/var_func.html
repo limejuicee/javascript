@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <title>
+            함
+        </title>
+    </head>
+    <body>
+        <script>
+            function hello (name) {
+                document.write(name+"iot"+"<br>");
+            }
+            hello("javascript");
+            let func=hello
+            func("javascript");
+
+            let myfunc=hello;
+            myfunc("javascript");
+
+            function printStar(count) {
+                for (i=0; i<count; i++) {
+                    document.write("*");
+                }
+            }
+
+            let yourfunc=printStar;
+
+            yourfunc(6);
+
+            //익명함수
+            let sum=function (a,b) {
+                return a+b;
+            }
+            document.write("<br>"+sum(1,2)+"<br>");
+
+            //익명함수 즉시 실행 방법. 함수 정의 전체를 ()로 묶어줌.
+            (function () {
+                document.write("iotiotiot"+"<br>");
+            }());
+            //매개변수 있는 익명함수의 즉시실행 방법
+            (function(a,b,c) {
+                return a+b+c;
+            });
+
+
+            //익명함수
+            document.write("<br>hello"+"<br>");
+            (function (a,b,c) {
+            document.write(a*b-c);
+            }(3,2,1));
+
+            let sum2=(a,b)=>{return a+b};
+            let sum3=(a,b)=>a+b; //한줄 표현이라 {}, return 생략가능
+            sum3(1,2);
+            let sum4=function() {
+                document.write("iot");
+            }
+            let sum5=()=>{document.write("iot")};
+            document.write("<br>&&&&&&&&<br>");
+            sum5();
+            document.write("<br>&&&&&&&&<br>");
+            let sum6=()=>document.write("iot"); //중괄호 안에 1문장이라 생략 가능
+            document.write("----");
+            sum6();
+            document.write("----");
+            let hi=function(user) {
+                document.write(user+"님, 안녕하세요");
+            }
+
+            let hi2=(user)=>{document.write(user+"님, 안녕하세요")};
+            hi2("고길동");
+
+            //화살표함수 -- 익명함수만 사용
+
+            //  (매개변수) => {함수 내용}
+        </script>
+    </body>
+</html>

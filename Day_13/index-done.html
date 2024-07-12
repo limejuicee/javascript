@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>수료</title>
+        <style>
+            div {
+                text-align: center;
+                width: 100px;
+                margin-left:50%; 
+            }
+            #dday {
+                background-color: aquamarine;
+                border-radius: 50%;
+                border : 1px solid black;
+                width:300px;
+                height: 300px;
+                margin : auto;
+            }
+            .text { 
+                text-align: center;
+                margin-left:50%;
+                margin :auto;
+            }
+            h1 {
+                text-align: center;
+                /* margin-top:300px; */
+            }
+            #dday {
+                color : white;
+                font-size: 50px;
+                font-weight: bold;
+                line-height: 280px;
+            }
+        </style>
+    </head>
+    <body>
+        
+            <h1>수료까지</h1>
+            <div id="dday"></div>
+        
+        <script>
+            let date=new Date();
+            let datetime=date.getTime();
+            let dateDDAY=new Date("2024-07-16");
+            let dateDDAYTime=dateDDAY.getTime();
+            let Rdday=(dateDDAYTime-datetime)/1000/60/60/24
+            document.write(dateDDAYTime-datetime);
+
+            let Dday=document.getElementById("dday");
+            Dday.innerText=("D-"+parseInt(Rdday+1)+" 일");
+            // alert(dateDDAY+"@@@@"+date+"@@@@"+datetime);
+
+        </script>
+    </body>
+</html>

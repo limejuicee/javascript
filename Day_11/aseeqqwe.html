@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            * {
+                list-style:none;
+                padding:0px 5px;
+            }
+            .date {
+                float:right;
+            }
+            .gong {
+                width:350px;
+                height:200px;
+                background-color:aqua;
+                padding:5px;
+                border-radius:30px 30px 0px 0px;
+                overflow:hidden;
+            }        
+            li {
+                line-height: 30px;
+            }    
+            /* ul {
+                width:100%;
+            } */
+            .cap {
+                font-weight: bold;
+                font-size : 30px;
+            }
+            li:nth-child(2n) {
+                background-color : greenyellow;
+            }
+            .popup {
+                width:400px;
+                height:300px;
+                text-align:center;
+                padding-top:10px;
+                background-color:azure;
+                top:10%;
+                left:40%;
+                position:absolute;
+                /* transform: translate(); */
+            }
+            .close {
+                position :relative;
+            }
+            .modal {
+                display:none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="gong">
+        <ul>
+            <h2>공지사항</h2>
+            <li class="ll">한국투어 홈페이지 개편 안내<span class="date">2022.03.01</span></li>
+            <li>여행 이벤트 상품을 드립니다<span class="date">2022.03.01</span></li>
+            <li>렌트 이용 시 주의해주세요<span class="date">2022.03.01</span></li>
+            <li>제주도 여행권 할인 안내<span class="date">2022.03.01</span></li>
+        </ul>
+        </div>
+        <div class="modal">
+        <div class="popup">
+            <h3>여행패키지 이벤트 안내</h3>
+            <p>명승지나 고적지를 중심으로 한 국내 여행 패키지 상품이 출시되었습니다.
+            여행 패키지 예약 후 SNS에 공유한 사진을 보내주시면
+            추첨을 통해 국내 여행 피키지 할인권을 드립니다. 많은 응모 바랍니다.
+            <button class="close">닫기</button>
+            </p>
+        </div>
+        </div>
+
+        <script>
+            let lisTag=document.querySelectorAll("li");
+            let scp=""
+            for (let i=0; i<lisTag.length; i++) {
+                lisTag[i].onmouseover=function() {
+                    lisTag[i].style.fontWeight="900";
+                    lisTag[i].style.cursor="pointer";
+                }
+                lisTag[i].onmouseout=function() {
+                    lisTag[i].style.fontWeight="";
+                }
+            }
+            
+            let modalStyle=document.querySelector('.modal')
+            document.querySelector('.ll').onclick=function(event) {
+                // alert("눌림")
+                modalStyle.style.display="block";
+                } 
+            
+                document.querySelector(".close").onclick=function(event) {
+                modalStyle.style.display="none";
+            }
+              
+            document.querySelectorAll("li").onmouseover=function(event) {
+                cursor=pointer;
+            }
+
+            //DOM요소에 접근하고 속성 가져오기
+            let closeElement=document.getElementsByClassName("close");
+            // closeElement.style.backgroundColor="red"; 이거 왜안됨?
+            console.log(closeElement);
+        </script>
+    </body>
+</html>
