@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>switch문으로 계산기 만들기</title>
+    </head>
+    <body>
+        <script>
+            let val=parseInt(prompt("첫 번째 숫자 값을 입력 해주세요"));
+            let con=prompt("사칙연산자 중 하나를 입력해주세요");
+            let val2=parseInt(prompt("두 번째 숫자 값을 입력 해주세요"));
+            
+             switch (con) {
+                case "-" : 
+                    alert(val+con+val2+"="+(val-val2));
+                    break;
+                case "+" :
+                    alert(val+con+val2+"="+(val+val2));
+                    break;
+                case "*" :
+                    alert(val+con+val2+"="+(val*val2));
+                    break;
+                case "/" :
+                    alert(val+con+val2+"="+(val/val2));
+                    break; 
+            }
+            //alert(val+con+Val+"="+"값"); 
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset='utf-8'>
+        <title>not op</title>
+    </head>
+    <body>
+
+        <script>
+            let str="여자";
+            let ret = false;
+            /*if (ret==false) {
+                document.write(str);
+            }
+            else{ 
+                document.write('남자');
+            }*/
+            ret=!ret;
+            let num=prompt("주민번호 ex)000000-0000000");
+            //document.write(num.charAt(7));
+            if(num.charAt(7)==0) {
+                document.write("여자")
+            }
+            else if(num.charAt(7)%2==1) {
+                document.write("남자")
+            }
+            else if(num.charAt(7)%2==0) {
+                document.write("여자")
+            } 
+            
+        </script>
+    </body>
+</html>

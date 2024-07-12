@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>bmi지수 구하기</title>
+    </head>
+    <body>
+          <script>
+            let height=prompt("키를 m단위로 입력하세요");
+            let weight=prompt("몸무게를 입력하세요");
+            let bmi=weight/(height*height);
+            let a="<img src='비만이미지/m1.jpg'>"
+            let A="<img src='비만이미지/w1.jpg'>"
+            let b="<img src='비만이미지/m2.jpg'>"
+            let B="<img src='비만이미지/w2.jpg'>"
+            let c="<img src='비만이미지/m3.jpg'>"
+            let C="<img src='비만이미지/w3.jpg'>"
+            let d="<img src='비만이미지/m4.jpg'>"
+            let D="<img src='비만이미지/w4.jpg'>"
+            let e="<img src='비만이미지/m5.jpg'>"
+            let E="<img src='비만이미지/w5.jpg'>"
+            let a1="<img src='비만이미지/18.jpg'>"
+            let b1="<img src='비만이미지/24.jpg'>"
+            let c1="<img src='비만이미지/29.jpg'>"
+            let d1="<img src='비만이미지/34.jpg'>"
+            let e1="<img src='비만이미지/35.jpg'>"
+            /*
+            if (bmi<18.5) {
+                document.write("저체중");
+            }else if(18.5<=bmi&&bmi<23) {
+                document.write("정상체중");
+            }else if(23<=bmi&&bmi<25) {
+                document.write("과체중");
+            }else if(25<=bmi&&bmi<30) {
+                document.write("비만 경도");
+            }else if(30<=bmi&&bmi<35) {
+                document.write("중정도");
+            }else if(bmi>=35) {
+                document.write("고도");
+            }
+            */
+            
+
+            if (bmi<18.5) {
+                document.write("<br>",a,"<br>",a1,"<br>",A);
+            }else if(bmi<23) {
+                document.write("<br>"+b+"<br>"+b1+"<br>"+B);
+            }else if(bmi<30) {
+                document.write("<br>",c,"<br>",c1,"<br>",C);
+            }else if(bmi<35) {
+                document.write("<br>",d,"<br>",d1,"<br>",D);
+            }else if(bmi>=35) {
+                document.write("<br>",e,"<br>",e1,"<br>",E);
+            }
+            </script>
+            
+    </body>
+</html>

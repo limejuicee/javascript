@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>스위치</title>
+    </head>
+    <body>
+        <script>
+            /* let value=prompt("과일");
+            switch(value) {
+                case "바나나":
+                    document.write("바나나 <img src='과일/banana.jpg' alt='바나나'>"); break
+                case "사과":
+                    document.write("사과 <img src='과일/apple.jpg' alt='사과'>"); break
+                case "딸기":
+                    document.write("딸기 <img src='과일/berry.jpg' alt='딸기'>"); break
+                case "망고":
+                    document.write("망고 <img src='과일/mango.jpg' alt='망고'>"); break
+                case "포도":
+                    document.write("포도 <img src='과일/grape.jpg' alt='포도'>"); break
+                    default:
+            } */
+
+            let val=0;
+            val=parseInt(Math.random()*13);
+            /*
+            0 : 노트북
+            1 : 청소기
+            2 : 컴퓨터
+            3 : 트럭
+            4 : 건조기
+            5 : 도깨비방망이
+            6 : 한우세트
+            7 : 그래픽카드
+            8 : 비트코인
+            9 : 머니
+            10 : 자전거
+            11 : 집
+            */
+
+            /* 0<Math.random()<1
+            0*12<=Math.random()*11<(1*12) */
+            switch(val) {
+                case 0:
+                    document.write("<img src='image/노트북.jpg'>");
+                    //그림
+                    break; 
+                case 1:
+                    document.write("<img src='image/청소기.jpg'>");
+                    //그림
+                    break; 
+                case 2:
+                    document.write("<img src='image/컴퓨터.jpg'>");
+                    //그림
+                    break; 
+                case 3:
+                    document.write("<img src='image/트럭.jpg'>");
+                    //그림
+                    break; 
+                case 4:
+                    document.write("<img src='image/건조기.jpg'>");
+                    //그림
+                    break; 
+                case 5:
+                    document.write("<img src='image/도깨비방망이.jpg'>");
+                    //그림
+                    break; 
+                case 6:
+                    document.write("<img src='image/한우세트.jpg'>");
+                    //그림
+                    break; 
+                case 7:
+                    document.write("<img src='image/그래피갘드.jpg'>");
+                    //그림
+                    break; 
+                case 8:
+                    document.write("<img src='image/비트코인.jpg'>");
+                    //그림
+                    break; 
+                case 9:
+                    document.write("<img src='image/돈.jpg'>");
+                    //그림
+                    break; 
+                case 10:
+                    document.write("<img src='image/자전거.jpg'>");
+                    //그림
+                    break; 
+                case 11:
+                    document.write("<img src='image/집.jpg'>");
+                    //그림
+                    break; 
+                case 12:
+                    document.write("<img src='image/꽝.jpg'>;");
+                    //그림
+                    break; 
+                }
+                document.write("<h1> 축하합니다 당첨되셨습니다.</h1>")
+        </script>
+    </body>
+</html>

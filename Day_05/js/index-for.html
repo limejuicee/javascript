@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>반복문</title>
+    </head>
+    <body>
+        <script>
+            //for
+            for (i=0; i<5; i++) {//i=5, 5<10, T
+                                //i=6, 6<10, T
+                                //i=7, 7<10, T
+                                //i=8, 8<10, T
+                                //i=9, 9<10, T
+                                //i=10, 10<10, F
+                document.write("이승구");
+            }
+            document.write("<br>")
+            for (i=0; i<5; i++) {
+                document.write("이승구",i*10+10);
+            }
+                document.write("<br>");
+            for (i=0; i<3; i=i+1) {
+                document.write("둘리");
+            }
+                document.write("<br>");
+            
+            
+            
+            /*    for (i=0; i<10; i++) {
+                document.write("*");
+            }
+                for (i=0; i<10; i++) {
+                document.write("*");
+            }
+                for (i=0; i<10; i++) {
+                document.write("*");
+            } */
+              /*  for (j=0; j<10; j++) {
+                document.write("<br>");
+                    for (i=0; i<10; i++) {
+                document.write("*");
+                    }
+                }  */
+
+                /* for (i=0; i<1; i++) {
+                    document.write("*"+"<br>")
+                    for (i=0; i<1; i++) {
+                        document.write("**"+"<br>")
+                        for (i=0; i<1; i++) {
+                            document.write("***"+"<br>")
+                            for (i=0; i<1; i++) {
+                                document.write("****"+"<br>")
+                                for (i=0; i<1; i++) {
+                                    document.write("*****"+"<br>")
+                                    for (i=0; i<1; i++) {
+                                        document.write("******"+"<br>")
+                                        for (i=0; i<1; i++) {
+                                            document.write("*******"+"<br>")
+                                            for (i=0; i<1; i++) {
+                                                document.write("********"+"<br>")
+                                                for (i=0; i<1; i++) {
+                                                    document.write("*********"+"<br>")
+                                                    for (i=0; i<1; i++) {
+                                                        document.write("**********")
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } */
+
+                document.write("<table border='1'>");
+                for (i=0; i<10  ; i++) {
+                    for(i=0; i<10; i++) 
+                    {
+                        document.write("<tr>");
+                        seatNo = i+1;
+                        document.write("<td>"+"("+i+","+0+")"+" "+"("+seatNo+","+1+")"+" "+"("+seatNo+","+2+")"+" "+"("+seatNo+","+3+")"+" "+"("+seatNo+","+4+")"+" "+"</td>");
+                        document.write("</tr>");
+                    }
+                }
+                document.write("</table>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>로그인</title>
+    </head>
+    <body>
+        <script>
+            //사용자 아이디를 입력받아
+            //아이디가 "student"이면 "<h1>환영합니다.</h1>"
+            //"stuedent"가 아니면 "운영자가 아닙니다" 출력
+            //document.write()로 출력
+            //비밀번호 추가
+
+            let id=prompt("id")
+            let pw=prompt("비밀번호")
+            /* switch(id) {
+                case  "student" :
+                    document.write("<h1>환영합니다.</h1>")
+                    break;
+                default :
+                    document.write("운영자가 아닙니다.")
+            } */
+
+            if (id=="iot"&&pw=="8888") {
+                document.write("<h1>환영합니다.</1>")
+            }
+            else if (id!="iot") {
+                document.write("아이디가 없습니다")
+            }
+            else if (pw!="8888") {
+                document.write("비밀번호를 틀렸습니다")
+            }
+
+            
+            /* {switch(id) {
+                case "iot" :
+            switch(pw) {
+                case "8888" :
+                    document.write("환영합니다")
+                    break;
+                    default :
+                    document.write("아이디가 없습니다")
+                    break;
+            }
+                default :
+                    document.write("비밀번호를 틀렸습니다")
+            }}  스위치로 로그인 만들기 중도 포기 */
+        </script>
+    </body>
+
+</html>

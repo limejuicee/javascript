@@ -1,0 +1,264 @@
+@charset 'utf-8';
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+    color:black
+}
+body{
+    /* background-color: aquamarine; */
+    width: 100%;
+}
+#wrap{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: burlywood;
+}
+.A{
+    width: 100%;
+    height:100px;
+    background-color: rgb(227, 246, 246);    
+}
+.logo{
+    float: left;
+}
+
+.logo>a>img{
+    height: 100px;
+}
+.menu{
+    width: 800px;
+    height: 50px;
+    float:right;
+    margin:25px;
+    background-color: beige;
+}
+.sub{
+    display: none;
+    z-index: 10;
+    position: relative;
+}
+li.main
+{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(192, 205, 229);
+    font-size: 20px;
+    float:left;  
+    font-weight: 900;
+    text-align: center;  
+    line-height: 50px;
+}
+
+ul.sub>li
+{
+    width: 200px;
+    height: 50px;
+    background-color: rgba(127, 224, 243);
+    font-size: 18px;
+    float:left;    
+    text-align: center;  
+    line-height: 50px;
+}
+li.main:hover, ul.sub>li:hover{
+    background-color: gainsboro;
+}
+
+.B{
+    width: 100%;
+    height:300px;
+    background-color: rgb(7, 158, 163);    
+}
+
+
+/* 좌우슬라이드 */
+.slide{
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+}
+/* .pan{
+    width: 1200px;
+    height: 300px;
+    position: relative;
+    left:0px;
+} */
+.pan{
+    width: 1200px;
+    height: 300px;
+    position: relative;
+}
+/* .stext{
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 35px;
+    font-weight: 600;
+    position: absolute;
+    color: aquamarine;
+    text-shadow: 3px 3px 3px #333;
+    top: 120px;
+} */
+
+.pan img{
+    width: 1200px;
+    height: 300px;
+}
+.s1{
+    width: 1200px;
+    height: 300px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 3;
+}
+.s2{
+    width: 1200px;
+    height: 300px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+.s3{
+    width: 1200px;
+    height: 300px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.img1_slide{
+    width:1200px;
+    height: 300px;
+    /* float:left; */
+}
+.img2_slide{
+    width:1200px;
+    height: 300px;
+    /* float:left; */
+}
+.img3_slide{
+    width:1200px;
+    height: 300px;
+    /* float:left; */
+}
+.pan_slide img {
+    width:1200px;
+    height: 300px;  
+}
+.C{
+    width: 100%;
+    height:200px;
+    background-color: rgb(216, 247, 248);    
+}
+
+.notice, .gallery, .banner{
+    width: calc(100% / 3);
+    height: 100%;
+    background-color: burlywood;
+    float: left;
+    
+}
+ .noti_title{
+    width: 110px;
+    height:50px;
+    background-color: azure;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 10px;
+} 
+.box{
+    width: calc(100% - 20px);
+    height: 140px;
+    background-color: rgb(126, 236, 236);
+    margin: 0 auto;
+}
+
+.notice .box>ul{
+    /* text-overflow: ellipsis; */
+    padding: 1px;
+    overflow: hidden;
+}
+.notice .box li{
+    line-height: 30px;
+    /* padding:2px;
+    text-overflow: ellipsis; */
+}
+.notice .box li:hover{
+    background-color: bisque;
+}
+
+/* 갤러리 영역 */
+.gallery img
+/* .gallery>.box>ul>li>a>img */
+{
+    width:100px;
+    height: 100px;
+}
+.gallery li:hover{
+    opacity: 0.6;
+}
+.D{
+    width: 100%;
+    height:100px;
+    background-color: cadetblue;    
+}
+#top{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(103, 251, 199);
+    z-index: -1;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+#bottom{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(103, 251, 199);
+    z-index: -1;
+    position: absolute;
+    top:600px;
+    left:0px;
+
+}
+.popup{
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 99;
+    background-color: white;
+    left: 50%;
+    top: 350px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.pp_title{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;;
+    text-align: center;    
+    font-size: 20px;
+}
+.pp_body{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    padding:0 50px 50px 50px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 50px;
+}
+.pp_body button {
+    position: absolute;
+    top:350px;
+    left:400px;
+    font-size: 20px;
+    padding: 5px;
+}
