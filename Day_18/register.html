@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            fieldset {
+                width : 450px;
+                margin : 0 auto;
+                padding : 10px;
+                border:1px solid black;
+            }
+            li {
+                width : 100px;
+                float : left;
+            }
+            button {
+                margin : 10px;
+            }
+            th {
+                background: gray;
+                font-weight: bold;
+            }
+            table,th,td {
+                border : 1px solid black;
+                border-collapse: collapse   ;
+                margin : 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <fieldset>
+                <legend>회원가입</legend>                    
+                <form>
+                    <ul type="none">
+                        <li>이름</li><input type="text" id="id"> <br>
+                        <li>연락처</li> <input type="text" id="phone"> <br>
+                        <button type="submit" value="회원가입">회원가입</button>
+                        <button type="reset" value="가입취소">가입취소</button>                    
+                    </ul>
+                </form>
+            </fieldset>
+            <div>
+                <table>
+                    <tr>
+                        <th rowspan="2">중분류</th>
+                        <th rowspan="2">평가항목</th>
+                        <th rowspan="2">평가지표</th>
+                        <th rowspan="2">배점</th>
+                        <th colspan="6">평가결과</th>
+                    </tr>
+                    <tr>
+                        <th>평점</th>
+                        <th>매우미흡</th>
+                        <th>미흡</th>
+                        <th>보통</th>
+                        <th>우수</th>
+                        <th>매우우수</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">리더십</td>
+                        <td rowspan="2">날씨경영이해</td>
+                        <td>1.1 경영자 날씨정보 중요성 인식</td>
+                        <td>10</td>
+                        <td><input type="text" name="score"></td>
+                        <td><input type="radio"></input>매우미흡</td>
+                        <td><input type="radio"></input>미흡</td>
+                        <td><input type="radio"></input>보통</td>
+                        <td><input type="radio"></input>우수</td>
+                        <td><input type="radio"></input>매우우수</td>
+                    </tr>
+                    <tr>
+                        <td>1.2 경영자 날씨경영 이해 정도</td>
+                        <td>5</td>
+                        <td><input type="text" id="score" name="score"></td>
+                        <td><input type="radio"></input>매우미흡</td>
+                        <td><input type="radio"></input>미흡</td>
+                        <td><input type="radio"></input>보통</td>
+                        <td><input type="radio"></input>우수</td>
+                        <td><input type="radio"></input>매우우수</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">평점합계(A)</td>
+                        <td></td>
+                        <td><input></td>
+                        <td colspan="5"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            // let score=document.querySelectorAll("score");
+            let score=document.querySelectorAll("score");
+            score[0].innerText('a');
+        </script>
+    </body>
+</html>

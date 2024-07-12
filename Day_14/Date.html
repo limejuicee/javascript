@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+    <head>        
+        <meta charset="utf-8">
+        <title>타이머</title>
+    </head>
+    <style>
+        #box {
+            width:100px;
+            height:50px;
+            border:1px solid black;
+            line-height: 50px;
+            text-align: center;
+        }
+        #box2 {
+            width:100px;
+            height:50px;
+            border:1px solid black;
+            line-height: 50px;
+            text-align: center;
+        }
+        #bell {
+            width : 500px;
+            
+        }
+    </style>
+    <body>
+        <div id="box">수업시작</div>
+        <div id="bell">
+            <img id="img" src="bell1.png" alt="bell">
+        </div>
+        <div id="box2">yt</div>
+        <script>
+        let start=document.getElementById("box");
+        start.addEventListener("click",function(){
+            setInterval (timeHandler, 1000)
+            function timeHandler() {
+        let date=new Date();
+        let hours=date.getHours();
+        let minutes=date.getMinutes();
+        let seconds=date.getSeconds();
+        let str=hours+":"+minutes+":"+seconds;
+
+        if (hours<12) {
+            str="오전 "+hours+":"+minutes+":"+seconds;
+            div.innerHTML=(str);
+            box2.innerHTML=(str);
+        } else if (hours==12) {
+            str="오후 "+hours+":"+minutes+":"+seconds;
+        }else {
+            hours=hours-12;
+            str="오후 "+hours+":"+minutes+":"+seconds;
+            box.innerHTML=(str)}
+        }
+
+        let img=document.getElementById("img");
+        
+        if (img.getAttribute("src")=="bell2.png") {
+            img.setAttribute("src", "bell1.png");
+        }else {
+            img.setAttribute("src","bell2.png")
+        }
+
+        })
+        
+        </script>
+    </body>
+</html>

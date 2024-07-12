@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            let numbers=new Array();
+            numbers.push(10);
+            console.log(numbers);
+
+            let numbers2=new Array(5);
+            numbers2[0]=10;
+            numbers2[1]=20;
+            console.log(numbers2);
+
+            let numbers3=["one","two","three"];
+            console.log(numbers3);
+
+            let numbers4=Array(10,20,30,40);
+            console.log(numbers4);
+
+            //concat() : 기존 배열에요소를 추가해 새로운 배열을 만듦
+            let nums=[1,2,3];
+            let ch=["a","b","c","d"];
+            let newNums=nums.concat(ch);
+            console.log(newNums);
+
+            let newNumbers4=nums.concat(numbers4);  //nums+nums4 배열을 합쳐서 새로 만들어진 배열
+            console.log(newNumbers4);
+            //배열 요소를 연결해서 하나의 문자열로 만듦. 요소사이에 /로 구분
+            let str=numbers4.join('/');
+            console.log(str);
+
+            let str2=numbers4.join();
+            console.log(str2);
+
+            //shift()메서드 : 배열 앞쪽에서 요소를 꺼냄
+            let value = numbers4.shift();
+            console.log(numbers4);
+            console.log(value);//0
+
+            let newLength=numbers4.push(100);
+            console.log(newLength);
+            console.log(numbers4);
+
+            const array1=['a','b','c'];
+            array1.forEach((element)=>console.log(element));
+
+            array1.forEach(function (element){
+                console.log(element);
+            });
+
+            let sum=0;
+            const array2=[100,200,300,400];
+            //각 배열의 요소를 합한 값을 구하시오. forEach() 사용하시오
+            array2.forEach(function(element) {
+                sum+=element;
+            })
+            console.log(sum);
+        </script>
+    </body>
+</html>
